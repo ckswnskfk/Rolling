@@ -1,4 +1,4 @@
-import DropDown from '@/components/common/DropDown/DropDown';
+import DropDown from '@/components/common/dropdown/DropDown';
 import styles from '@/pages/PostIdMessage/FontSelect.module.scss';
 
 const fontOptions = [

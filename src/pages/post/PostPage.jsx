@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { postRecipient } from '@/apis/post/postRecipients';
 import Button from '@/components/common/button/Button';
 import GlobalHeader from '@/components/common/header/GlobalHeader';
-import Input from '@/components/common/Input/Input';
+import Input from '@/components/common/input/Input';
 import Layout from '@/components/common/Layout';
 import styles from '@/pages/post/PostPage.module.scss';
 import Select from '@/pages/post/Select';

@@ -4,9 +4,9 @@ import { useNavigate } from 'react-router-dom';
 
 import postRecipientMessage from '@/apis/post/postRecipientsMessage';
 import Button from '@/components/common/button/Button';
-import DropDown from '@/components/common/DropDown/DropDown';
+import DropDown from '@/components/common/dropdown/DropDown';
 import GlobalHeader from '@/components/common/header/GlobalHeader';
-import Input from '@/components/common/Input/Input';
+import Input from '@/components/common/input/Input';
 import Layout from '@/components/common/Layout';
 import FontSelector from '@/pages/PostIdMessage/FontSelect';
 import styles from '@/pages/PostIdMessage/PostMessage.module.scss';
