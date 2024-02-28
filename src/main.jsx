@@ -1,6 +1,6 @@
 import '@/assets/globals.scss';
 
-import React from 'react';
+import React, { lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
@@ -11,7 +11,6 @@ import HomePage from '@/pages/home/HomePage';
 import ListPage from '@/pages/list/ListPage';
 import PostIdPage from '@/pages/post/PostIdPage';
 import PostPage from '@/pages/post/PostPage';
-import PostMessage from '@/pages/PostIdMessage/PostMessage';
 
 const router = createBrowserRouter([
 	{
@@ -58,7 +57,14 @@ const router = createBrowserRouter([
 	},
 	{
 		path: '/post/:recipientId/message',
-		element: <PostMessage />,
+		Component: lazy(() => import('@/pages/PostIdMessage/PostMessage')),
+		// async lazy() {
+		// 	let PostMessage = await import('@/pages/PostIdMessage/PostMessage');
+		// 	console.log(PostMessage);
+		// 	return {
+		// 		Component: PostMessage,
+		// 	};
+		// },
 	},
 
 	{

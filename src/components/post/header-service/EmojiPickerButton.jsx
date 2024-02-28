@@ -1,6 +1,5 @@
-import EmojiPicker from 'emoji-picker-react';
 import { motion } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
+import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 
 import { postRecipientsReactions } from '@/apis/recipients/reactionsAPI';
 import Button from '@/components/common/button/Button';
@@ -9,6 +8,8 @@ import styles from '@/components/post/header-service/EmojiPickerButton.module.sc
 import { popover } from '@/utils/framerAnimation';
 const EMOJI_PICKER_WIDTH = '30.7rem';
 const EMOJI_PICKER_HEIGHT = '39.3rem';
+
+const LazyEmojiPicker = lazy(() => import('emoji-picker-react'));
 
 export default function EmojiPickerButton({
 	recipientId,
@@ -50,20 +51,22 @@ export default function EmojiPickerButton({
 				labelhide={true}
 				onClick={handlePickerToggle}
 			/>
-			{isPickerOpened && (
-				<motion.div
-					className={styles.emojiPicker}
-					initial='hidden'
-					animate='visible'
-					variants={popover}
-				>
-					<EmojiPicker
-						onEmojiClick={handleEmojiClick}
-						width={EMOJI_PICKER_WIDTH}
-						height={EMOJI_PICKER_HEIGHT}
-					/>
-				</motion.div>
-			)}
+			<Suspense fallback={null}>
+				{isPickerOpened && (
+					<motion.div
+						className={styles.emojiPicker}
+						initial='hidden'
+						animate='visible'
+						variants={popover}
+					>
+						<LazyEmojiPicker
+							onEmojiClick={handleEmojiClick}
+							width={EMOJI_PICKER_WIDTH}
+							height={EMOJI_PICKER_HEIGHT}
+						/>
+					</motion.div>
+				)}
+			</Suspense>
 		</div>
 	);
 }
