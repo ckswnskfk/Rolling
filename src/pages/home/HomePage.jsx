@@ -35,6 +35,7 @@ export default function HomePage() {
 							src='https://res.cloudinary.com/divjslgco/image/upload/v1702285173/codeit/rolling/image/service_intro_rolling.png'
 							alt='인트로 롤링페이퍼 이미지'
 							className={styles.intro_image_rolling}
+							fetchpriority='high'
 						/>
 					</Card.Panel>
 				</Card>
@@ -64,6 +65,7 @@ export default function HomePage() {
 							src='https://res.cloudinary.com/divjslgco/image/upload/v1702285259/codeit/rolling/image/service_intro_emoji.png'
 							alt='인트로 이모지 이미지'
 							className={styles.intro_image_emoji}
+							fetchpriority='high'
 						/>
 					</Card.Panel>
 				</Card>
