@@ -31,12 +31,18 @@ export default function HomePage() {
 						/>
 					</Card.Panel>
 					<Card.Panel className={styles.intro_image_rolling_container}>
-						<Card.Thumbnail
-							src='https://res.cloudinary.com/divjslgco/image/upload/v1702285173/codeit/rolling/image/service_intro_rolling.png'
-							alt='인트로 롤링페이퍼 이미지'
-							className={styles.intro_image_rolling}
-							fetchpriority='high'
-						/>
+						<picture>
+							<source
+								srcSet='https://res.cloudinary.com/divjslgco/image/upload/v1702285173/codeit/rolling/image/service_intro_rolling_webp.webp'
+								type='image/webp'
+							/>
+							<Card.Thumbnail
+								src='https://res.cloudinary.com/divjslgco/image/upload/v1702285173/codeit/rolling/image/service_intro_rolling.png'
+								alt='인트로 롤링페이퍼 이미지'
+								className={styles.intro_image_rolling}
+								fetchpriority='high'
+							/>
+						</picture>
 					</Card.Panel>
 				</Card>
 				<Card className={`${styles.intro_card} ${styles.emoji}`}>
@@ -61,12 +67,18 @@ export default function HomePage() {
 						/>
 					</Card.Panel>
 					<Card.Panel className={styles.intro_image_emoji_container}>
-						<Card.Thumbnail
-							src='https://res.cloudinary.com/divjslgco/image/upload/v1702285259/codeit/rolling/image/service_intro_emoji.png'
-							alt='인트로 이모지 이미지'
-							className={styles.intro_image_emoji}
-							fetchpriority='high'
-						/>
+						<picture>
+							<source
+								srcSet='https://res.cloudinary.com/divjslgco/image/upload/v1702285259/codeit/rolling/image/service_intro_emoji_webp.webp'
+								type='image/webp'
+							/>
+							<Card.Thumbnail
+								src='https://res.cloudinary.com/divjslgco/image/upload/v1702285259/codeit/rolling/image/service_intro_emoji.png'
+								alt='인트로 이모지 이미지'
+								className={styles.intro_image_emoji}
+								fetchpriority='high'
+							/>
+						</picture>
 					</Card.Panel>
 				</Card>
 			</section>
