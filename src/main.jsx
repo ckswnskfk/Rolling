@@ -1,6 +1,6 @@
 import '@/assets/globals.scss';
 
-import React, { lazy } from 'react';
+import React, { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
@@ -91,7 +91,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>
 		<ModalProvider>
-			<RouterProvider router={router} />
+			<Suspense fallback={null}>
+				<RouterProvider router={router} />
+			</Suspense>
 		</ModalProvider>
 	</React.StrictMode>,
 );
