@@ -52,8 +52,10 @@ const Carousel = forwardRef(function Carousel(
 		onClickNext();
 	};
 
+	console.log(currentIdx);
+
 	const isFirst = currentIdx <= 0;
-	const isEnd = currentIdx + swipeCount >= itemList.length - swipeCount;
+	const isEnd = currentIdx + swipeCount >= itemList.length;
 
 	return (
 		<div className={styles.container} ref={ref}>
