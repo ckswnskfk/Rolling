@@ -1,6 +1,6 @@
 # Rolling
 **기획 내용**: 추억의 롤링 페이퍼를 웹 상에서도 즐길 수 있는 서비스 <br/>
-**배포 링크:** https://rolling-537.pages.dev/  <br/>
+**배포 링크:** https://rolling-azure.vercel.app/ <br/>
 **진행 기간**: 2023.12.09~ 2023.12.22 <br/>
 **팀원**: [정용준(팀장)](https://github.com/dkile), [이찬주](https://github.com/ckswnskfk), [김동빈](https://github.com/d0ngbb00), [안소연](https://github.com/sozign) <br/>
 **기술 스택**: react, react-router, scss, [ky](https://github.com/sindresorhus/ky), [framer-motion](https://www.framer.com/motion/) <br/>
